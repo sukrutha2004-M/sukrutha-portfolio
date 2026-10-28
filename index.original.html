@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUKRUTHA M | Embedded Systems Engineer Portfolio</title>
+  <meta name="description" content="Personal portfolio of Sukrutha M - Embedded Systems Engineer specializing in microcontroller programming, Embedded C, firmware development, FreeRTOS, and hardware interfacing.">
+  <meta name="keywords" content="Sukrutha M, Embedded Systems Engineer, Embedded C, STM32, ESP32, FreeRTOS, PID Controller, Microcontrollers, Firmware, Arduino, Kerala, India">
+  <meta name="author" content="Sukrutha M">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SUKRUTHA M | Embedded Systems Engineer">
+  <meta property="og:description" content="Enthusiastic Embedded Systems Engineer with hands-on experience in microcontroller programming, firmware development, and hardware interfacing.">
+  <meta property="og:image" content="assets/images/profile-avatar.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/profile-avatar.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Circuit Grid Background -->
+  <div class="circuit-grid-overlay" aria-hidden="true"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Sukrutha M Home">
+        <div class="brand-icon">
+          <span>SM</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SUKRUTHA M</span>
+          <span class="brand-role">Embedded Systems</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Technical Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certification" class="nav-link">Certification</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="assets/resume.pdf" download="Sukrutha_M_Resume.pdf" class="btn btn-resume" title="Download Sukrutha M Resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume PDF</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  <aside class="mobile-menu-drawer" id="mobile-menu" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><span>SM</span></div>
+        <span class="brand-name">SUKRUTHA M</span>
+      </div>
+      <button class="modal-close" id="mobile-close-btn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link">About Me</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Technical Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#certification" class="mobile-nav-link">Certification</a></li>
+      <li><a href="#education" class="mobile-nav-link">Education</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 1.5rem;">
+      <a href="assets/resume.pdf" download="Sukrutha_M_Resume.pdf" class="btn btn-resume" style="width: 100%; justify-content: center;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Download Resume</span>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- =========================================================================
+         1. HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <canvas id="circuit-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-status-pill">
+            <span class="live-indicator"></span>
+            <span>OPEN TO EMBEDDED SYSTEMS OPPORTUNITIES</span>
+          </div>
+
+          <h1 class="hero-name">SUKRUTHA M</h1>
+          <h2 class="hero-subtitle">Embedded Systems Engineer</h2>
+
+          <p class="hero-intro">
+            Enthusiastic Embedded Systems fresher with hands-on experience in microcontroller programming, 
+            hardware interfacing, and communication protocols. Experienced in Embedded C and firmware development, 
+            with a strong dedication to designing efficient, reliable, and real-time embedded solutions.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Contact Me</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a href="assets/resume.pdf" download="Sukrutha_M_Resume.pdf" class="btn btn-resume">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <!-- Quick Metadata Chips -->
+          <div class="hero-meta-strip">
+            <div class="meta-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Palakkad, Kerala, India</span>
+            </div>
+            <a href="mailto:sukrutha9656@gmail.com" class="meta-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>sukrutha9656@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/sukrutha426" target="_blank" rel="noopener noreferrer" class="meta-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>linkedin.com/in/sukrutha426</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Hardware Telemetry Display Card -->
+        <div class="hero-visual-card reveal-on-scroll">
+          <div class="telemetry-header">
+            <div class="telemetry-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+              <span>HARDWARE CORE TELEMETRY</span>
+            </div>
+            <div class="telemetry-status-badge">
+              <span class="dot"></span>
+              <span>SYSTEM ONLINE</span>
+            </div>
+          </div>
+
+          <div class="telemetry-core-center">
+            <div class="core-avatar-frame">
+              <img src="assets/images/profile-avatar.svg" alt="Sukrutha M Embedded Core Chip Symbol" width="140" height="140">
+            </div>
+          </div>
+
+          <div class="telemetry-specs-grid">
+            <div class="spec-cell">
+              <div class="spec-label">Primary Languages</div>
+              <div class="spec-val cyan">Embedded C / C / Python</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-label">Core Target MCUs</div>
+              <div class="spec-val emerald">STM32 / ESP32 / AVR</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-label">Protocols Interfaced</div>
+              <div class="spec-val amber">UART • SPI • I2C</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-label">Control Paradigm</div>
+              <div class="spec-val cyan">Closed-Loop PID & RTOS</div>
+            </div>
+          </div>
+
+          <div class="telemetry-pin-signals">
+            <div class="pin-signal-row">
+              <span>GPIO / ADC / PWM Status</span>
+              <span class="signal-live">
+                <span class="signal-bar"><span class="signal-bar-fill"></span></span>
+                <span>Active 100%</span>
+              </span>
+            </div>
+            <div class="pin-signal-row">
+              <span>BSc Instrumentation</span>
+              <span style="color: #93c5fd;">NSS College Nemmara (2025)</span>
+            </div>
+            <div class="pin-signal-row">
+              <span>Certification</span>
+              <span style="color: #34d399;">IPCS Global Embedded Eng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         2. ABOUT ME SECTION
+         ========================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>Profile Overview</span>
+          </div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            Bridging hardware architecture and low-level firmware engineering to develop robust embedded solutions.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Career Narrative -->
+          <div class="about-narrative reveal-on-scroll">
+            <p>
+              I am an enthusiastic <strong>Embedded Systems fresher</strong> with solid hands-on experience in 
+              microcontroller programming, low-level firmware development, peripheral configuration, and real-time hardware interfacing.
+            </p>
+
+            <div class="about-quote-box">
+              "Dedicated to applying technical skills in microcontroller architecture, communication buses, and sensor integration to develop efficient, deterministic, and reliable embedded solutions."
+            </div>
+
+            <p>
+              My background is grounded in a <strong>Bachelor of Science in Instrumentation</strong> from NSS College, Nemmara, 
+              which provided me with a deep physical intuition for measurement systems, sensor dynamics, signal conditioning, and automated feedback loops.
+            </p>
+
+            <p>
+              Through comprehensive professional training as a <strong>Certified Embedded Systems Engineer at IPCS Global</strong>, 
+              I have engineered bare-metal and RTOS firmware across diverse silicon families—ranging from 8-bit AVR and PIC microcontrollers to 16-bit MSP430, ARM Cortex-M LPC2148, STM32, and dual-core ESP32 systems.
+            </p>
+
+            <div class="languages-pill-group">
+              <span class="lang-title">Languages Known:</span>
+              <span class="lang-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                English (Professional)
+              </span>
+              <span class="lang-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Malayalam (Native)
+              </span>
+            </div>
+          </div>
+
+          <!-- Engineering Focus Pillars -->
+          <div class="about-pillars-grid reveal-on-scroll">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Firmware & Low-Level C</h3>
+              <p class="pillar-desc">
+                Writing clean, deterministic Embedded C code, structuring register-level drivers, and deploying FreeRTOS for real-time task scheduling.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Microcontroller Architecture</h3>
+              <p class="pillar-desc">
+                Configuring memory maps, interrupt vectors, timers, ADC, PWM channels, and clock trees across STM32, AVR, PIC, MSP430, and ARM platforms.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Hardware Interfacing & Protocols</h3>
+              <p class="pillar-desc">
+                Mastering serial buses (UART, SPI, I2C), motor driver integration, breadboard prototyping, electronic schematics, and PCB layout fundamentals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. TECHNICAL SKILLS SECTION
+         ========================================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">
+            Categorized overview of programming languages, silicon architectures, protocols, toolchains, and hardware design tools.
+          </p>
+        </div>
+
+        <!-- Category Filter Navigation -->
+        <div class="skills-filter-nav reveal-on-scroll">
+          <button class="skills-filter-btn active" data-filter="all">All Skills</button>
+          <button class="skills-filter-btn" data-filter="programming">Programming</button>
+          <button class="skills-filter-btn" data-filter="microcontrollers">Microcontrollers</button>
+          <button class="skills-filter-btn" data-filter="tools">Development Tools</button>
+          <button class="skills-filter-btn" data-filter="protocols">Protocols</button>
+          <button class="skills-filter-btn" data-filter="embedded">Embedded & PCB</button>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="skills-cards-grid reveal-on-scroll">
+          <!-- 1. Programming -->
+          <div class="skill-category-card" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skill-badge-count">3 Skills</span>
+            </div>
+            <h3 class="skill-cat-title">Programming</h3>
+            <p class="skill-cat-desc">Core languages used for bare-metal firmware, algorithms, and automation scripts.</p>
+            <div class="skill-tag-pills">
+              <span class="skill-pill highlight">Embedded C</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">Python</span>
+            </div>
+          </div>
+
+          <!-- 2. Microcontrollers -->
+          <div class="skill-category-card" data-category="microcontrollers">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <span class="skill-badge-count">7 Architectures</span>
+            </div>
+            <h3 class="skill-cat-title">Microcontrollers</h3>
+            <p class="skill-cat-desc">Extensive hands-on experience with diverse 8-bit, 16-bit, and 32-bit silicon families.</p>
+            <div class="skill-tag-pills">
+              <span class="skill-pill highlight">STM32 (ARM Cortex)</span>
+              <span class="skill-pill">ESP32</span>
+              <span class="skill-pill">MSP430</span>
+              <span class="skill-pill">AVR ATmega32</span>
+              <span class="skill-pill">PIC16F</span>
+              <span class="skill-pill">LPC2148 (ARM7)</span>
+              <span class="skill-pill">Arduino Uno</span>
+              <span class="skill-pill">Raspberry Pi Pico</span>
+            </div>
+          </div>
+
+          <!-- 3. Development Tools -->
+          <div class="skill-category-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <span class="skill-badge-count">5 IDEs</span>
+            </div>
+            <h3 class="skill-cat-title">Development Tools</h3>
+            <p class="skill-cat-desc">Industry-standard integrated development environments for compiling, debugging, and flashing.</p>
+            <div class="skill-tag-pills">
+              <span class="skill-pill highlight">STM32CubeIDE</span>
+              <span class="skill-pill">Keil µVision</span>
+              <span class="skill-pill">MPLAB X IDE</span>
+              <span class="skill-pill">Code Composer Studio</span>
+              <span class="skill-pill">Arduino IDE</span>
+            </div>
+          </div>
+
+          <!-- 4. Communication Protocols -->
+          <div class="skill-category-card" data-category="protocols">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span class="skill-badge-count">3 Standards</span>
+            </div>
+            <h3 class="skill-cat-title">Communication Protocols</h3>
+            <p class="skill-cat-desc">Mastery of asynchronous and synchronous serial communication standards for sensor and peripheral busing.</p>
+            <div class="skill-tag-pills">
+              <span class="skill-pill highlight">UART</span>
+              <span class="skill-pill highlight">SPI</span>
+              <span class="skill-pill highlight">I2C</span>
+            </div>
+          </div>
+
+          <!-- 5. Embedded Skills -->
+          <div class="skill-category-card" data-category="embedded">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <span class="skill-badge-count">5 Competencies</span>
+            </div>
+            <h3 class="skill-cat-title">Embedded Skills</h3>
+            <p class="skill-cat-desc">Microcontroller peripheral interfacing and rapid electronic prototype assembly.</p>
+            <div class="skill-tag-pills">
+              <span class="skill-pill highlight">GPIO Configuration</span>
+              <span class="skill-pill">ADC (Analog-to-Digital)</span>
+              <span class="skill-pill">PWM Signal Generation</span>
+              <span class="skill-pill">Motor Driver Interfacing</span>
+              <span class="skill-pill">Breadboard Prototyping</span>
+            </div>
+          </div>
+
+          <!-- 6. PCB Design -->
+          <div class="skill-category-card" data-category="embedded">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="skill-badge-count">2 EDA Suites</span>
+            </div>
+            <h3 class="skill-cat-title">PCB Design</h3>
+            <p class="skill-cat-desc">Electronic schematic capture, component footprint assignment, and board layout concepts.</p>
+            <div class="skill-tag-pills">
+              <span class="skill-pill highlight">KiCad</span>
+              <span class="skill-pill">Altium Designer</span>
+              <span class="skill-pill">Board Layout Concepts</span>
+            </div>
+          </div>
+
+          <!-- 7. Embedded Linux -->
+          <div class="skill-category-card" data-category="embedded">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="skill-badge-count">2 Competencies</span>
+            </div>
+            <h3 class="skill-cat-title">Embedded Linux</h3>
+            <p class="skill-cat-desc">Single-board computer input/output interfacing and command-line automation.</p>
+            <div class="skill-tag-pills">
+              <span class="skill-pill highlight">Raspberry Pi GPIO</span>
+              <span class="skill-pill">Basic Shell Scripting</span>
+              <span class="skill-pill">Linux Terminal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. PROJECTS SECTION
+         ========================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>Engineering Implementations</span>
+          </div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Hands-on embedded engineering projects featuring closed-loop control algorithms, real-time sensing, and multi-tasking firmware.
+          </p>
+        </div>
+
+        <div class="projects-stack">
+          <!-- PROJECT 1: PID Algorithm for DC Motor Speed Control -->
+          <article class="project-flagship-card reveal-on-scroll">
+            <div class="project-grid">
+              <!-- Left Info Pane -->
+              <div class="project-info-pane">
+                <div class="project-meta-header">
+                  <span class="project-num-tag">PROJECT 01</span>
+                  <span class="project-type-tag">Closed-Loop Control System</span>
+                </div>
+
+                <h3 class="project-title">Realization of a PID Algorithm for DC Motor Speed Control</h3>
+
+                <p class="project-description">
+                  Developed an autonomous closed-loop PID control system using Arduino to regulate DC motor speed dynamically. 
+                  The system measures instantaneous rotational speed via encoder feedback, compares it against a desired target setpoint, 
+                  and computes continuous error corrections using tuned proportional, integral, and derivative gains.
+                </p>
+
+                <ul class="project-features-list">
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Real-time Closed-Loop Error Correction:</strong> Continuously computes deviation between target RPM and optical encoder feedback.</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Parameter Tuning:</strong> Rigorously calibrated Kp, Ki, and Kd coefficients to eliminate steady-state error and suppress overshoot.</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Performance Analysis:</strong> Evaluated system transient response, rise time, and settling stability using speed-vs-time graphs and error metrics.</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-tags">
+                  <span class="tech-badge">Arduino Uno</span>
+                  <span class="tech-badge">PID Control</span>
+                  <span class="tech-badge">DC Motor</span>
+                  <span class="tech-badge">Kp, Ki, Kd Tuning</span>
+                  <span class="tech-badge">Closed-Loop Control</span>
+                  <span class="tech-badge">Speed Feedback</span>
+                  <span class="tech-badge">PWM / L298N</span>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn btn-primary" data-modal-target="modal-project-pid">
+                    <span>View Project Specs</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right Visual & Live Simulator Pane -->
+              <div class="project-visual-pane">
+                <div class="visual-pane-header">
+                  <div class="visual-pane-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>HARDWARE SCHEMATIC & RESPONSE OSCILLOSCOPE</span>
+                  </div>
+                  <span style="color: #38bdf8;">SIMULATOR LIVE</span>
+                </div>
+
+                <!-- Schematic Image Placeholder -->
+                <div class="schematic-preview-wrapper">
+                  <img src="assets/images/project-pid-placeholder.svg" alt="PID DC Motor Control System Schematic and Circuit Architecture Diagram" loading="lazy">
+                  <div class="schematic-badge">SYSTEM SCHEMATIC</div>
+                </div>
+
+                <!-- Interactive Live PID Tuning Box -->
+                <div class="interactive-sim-box">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #93c5fd; font-weight: 700;">LIVE PID STEP-RESPONSE CURVE</span>
+                    <div class="preset-buttons-group">
+                      <button class="btn-preset" id="pid-preset-tuned" title="Load critically tuned gains">Optimal Tuned</button>
+                      <button class="btn-preset" id="pid-preset-under" title="Load high overshoot gains">Underdamped</button>
+                      <button class="btn-preset" id="pid-preset-over" title="Load sluggish gains">Overdamped</button>
+                    </div>
+                  </div>
+
+                  <!-- Canvas Graph -->
+                  <div class="sim-canvas-container">
+                    <canvas id="pid-sim-canvas" width="500" height="160"></canvas>
+                  </div>
+
+                  <!-- Sliders for Kp, Ki, Kd -->
+                  <div class="sim-controls-grid">
+                    <div class="sim-control-item">
+                      <div class="sim-control-label">
+                        <span>Proportional (Kp)</span>
+                        <span class="sim-control-val" id="pid-kp-val">2.45</span>
+                      </div>
+                      <input type="range" class="sim-slider" id="pid-kp" min="0.1" max="8.0" step="0.05" value="2.45">
+                    </div>
+                    <div class="sim-control-item">
+                      <div class="sim-control-label">
+                        <span>Integral (Ki)</span>
+                        <span class="sim-control-val" id="pid-ki-val">0.82</span>
+                      </div>
+                      <input type="range" class="sim-slider" id="pid-ki" min="0.0" max="3.0" step="0.02" value="0.82">
+                    </div>
+                    <div class="sim-control-item">
+                      <div class="sim-control-label">
+                        <span>Derivative (Kd)</span>
+                        <span class="sim-control-val" id="pid-kd-val">0.15</span>
+                      </div>
+                      <input type="range" class="sim-slider" id="pid-kd" min="0.0" max="0.8" step="0.01" value="0.15">
+                    </div>
+                  </div>
+
+                  <!-- Hidden setpoint slider for quick responsiveness -->
+                  <input type="range" id="pid-sp" min="1000" max="2200" step="50" value="1800" style="display: none;">
+
+                  <!-- Real-time metrics output -->
+                  <div class="sim-metrics-strip">
+                    <div class="sim-metric">Overshoot: <strong id="pid-overshoot">4.2%</strong></div>
+                    <div class="sim-metric">Settling Time: <strong id="pid-settling">0.42s</strong></div>
+                    <div class="sim-metric">Steady Error: <strong id="pid-sse">0 RPM</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Self-Balancing Boat Stabilization System -->
+          <article class="project-flagship-card reveal-on-scroll">
+            <div class="project-grid">
+              <!-- Left Info Pane -->
+              <div class="project-info-pane">
+                <div class="project-meta-header">
+                  <span class="project-num-tag">PROJECT 02</span>
+                  <span class="project-type-tag" style="color: #a855f7;">Real-Time Embedded & FreeRTOS</span>
+                </div>
+
+                <h3 class="project-title">Self-Balancing Boat Stabilization System</h3>
+
+                <p class="project-description">
+                  Developed an active marine vehicle stabilization platform powered by an ESP32 microcontroller, 
+                  MPU6050 6-axis inertial measurement unit (IMU), and a high-precision stepper motor counterweight mechanism. 
+                  Leveraged FreeRTOS for preemptive multi-tasking to guarantee deterministic sensor polling, filtering, and rapid motor actuation.
+                </p>
+
+                <ul class="project-features-list">
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>FreeRTOS Multitasking Architecture:</strong> Partitioned firmware into independent concurrent tasks for IMU acquisition, attitude calculation, and stepper control.</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>I2C Sensor Bus Interfacing:</strong> Read angular velocity and linear acceleration from MPU6050 over I2C to calculate continuous roll angles.</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Automatic Dynamic Roll Stabilization:</strong> Actuated a stepper motor counter-torque arm in real time based on measured roll deviation to keep the hull level.</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-tags">
+                  <span class="tech-badge">ESP32</span>
+                  <span class="tech-badge">MPU6050</span>
+                  <span class="tech-badge">FreeRTOS</span>
+                  <span class="tech-badge">I2C Protocol</span>
+                  <span class="tech-badge">Stepper Motor</span>
+                  <span class="tech-badge">Roll-Angle Stabilization</span>
+                  <span class="tech-badge">Inertial Sensing</span>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn btn-primary" data-modal-target="modal-project-boat">
+                    <span>View Project Specs</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right Visual & Live Simulator Pane -->
+              <div class="project-visual-pane">
+                <div class="visual-pane-header">
+                  <div class="visual-pane-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>FREERTOS TASK ARCHITECTURE & ATTITUDE SIMULATOR</span>
+                  </div>
+                  <span class="status-tag status-stable" id="boat-status">STABLE (0° TARGET)</span>
+                </div>
+
+                <!-- Schematic Image Placeholder -->
+                <div class="schematic-preview-wrapper">
+                  <img src="assets/images/project-boat-placeholder.svg" alt="Self-Balancing Boat Stabilization System FreeRTOS Architecture Diagram" loading="lazy">
+                  <div class="schematic-badge">SYSTEM ARCHITECTURE</div>
+                </div>
+
+                <!-- Interactive Live Boat Attitude Simulator -->
+                <div class="interactive-sim-box">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #93c5fd; font-weight: 700;">DYNAMIC WATER ROLL SIMULATION</span>
+                    <button class="btn-preset" id="boat-inject-wave" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">
+                      Inject Wave Tilt
+                    </button>
+                  </div>
+
+                  <!-- Canvas Graph -->
+                  <div class="sim-canvas-container">
+                    <canvas id="boat-sim-canvas" width="500" height="160"></canvas>
+                  </div>
+
+                  <!-- Angle Slider -->
+                  <div class="sim-control-item">
+                    <div class="sim-control-label">
+                      <span>External Roll Angle Perturbation (θ)</span>
+                      <span class="sim-control-val" id="boat-roll-angle">0.0°</span>
+                    </div>
+                    <input type="range" class="sim-slider" id="boat-roll-slider" min="-25" max="25" step="0.5" value="0">
+                  </div>
+
+                  <!-- Real-time metrics output -->
+                  <div class="sim-metrics-strip">
+                    <div class="sim-metric">Stepper Arm: <strong id="boat-stepper-angle">0.0°</strong></div>
+                    <div class="sim-metric">MPU6050 Rate: <strong>100 Hz</strong></div>
+                    <div class="sim-metric">RTOS Latency: <strong>&lt;1 ms</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. CERTIFICATION SECTION
+         ========================================================================= -->
+    <section class="certification-section" id="certification">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>Professional Credentials</span>
+          </div>
+          <h2 class="section-title">Professional Certification</h2>
+          <p class="section-subtitle">
+            Formal engineering immersion in firmware programming, electronic hardware interfacing, and PCB design.
+          </p>
+        </div>
+
+        <div class="cert-card-container reveal-on-scroll">
+          <div class="cert-card">
+            <div class="cert-header">
+              <div class="cert-title-group">
+                <div class="cert-stamp-badge" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="cert-title">Certified Embedded Systems Engineer</h3>
+                  <div class="cert-issuer">IPCS Global, Trivandrum</div>
+                </div>
+              </div>
+              <div class="cert-timeline-badge">2025 – Present</div>
+            </div>
+
+            <p class="cert-body-desc">
+              Comprehensive professional training curriculum focusing on end-to-end embedded engineering—from bare-metal 
+              Embedded C programming and silicon architecture to electronic schematics, peripheral interfacing, and printed circuit board (PCB) design.
+            </p>
+
+            <div class="cert-curriculum-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              <span>Verified Training Modules Covered:</span>
+            </div>
+
+            <div class="cert-modules-grid">
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Embedded C programming</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Microcontroller architecture</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>GPIO, ADC and PWM configuration</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Peripheral interfacing</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Arduino, AVR, PIC &amp; ARM</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>MSP430 &amp; STM32 architectures</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Raspberry Pi Pico &amp; Raspberry Pi</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Electronic schematics &amp; circuit design</span>
+              </div>
+              <div class="cert-module-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>PCB fundamentals &amp; board layout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. EDUCATION SECTION
+         ========================================================================= -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>Academic Background</span>
+          </div>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">
+            Strong foundation in instrumentation engineering, physical measurements, and science fundamentals.
+          </p>
+        </div>
+
+        <div class="timeline-container reveal-on-scroll">
+          <!-- 1. BSc Instrumentation -->
+          <div class="timeline-entry">
+            <div class="timeline-marker">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="timeline-card">
+              <span class="timeline-period-badge">2022 – 2025</span>
+              <h3 class="timeline-degree">Bachelor of Science (BSc) in Instrumentation</h3>
+              <div class="timeline-institution">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <span>NSS College, Nemmara, Kerala</span>
+              </div>
+              <p class="timeline-desc">
+                Rigorous degree program focusing on sensor physics, transducers, industrial instrumentation, process control theory, operational amplifiers, and signal conditioning circuitry.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Higher Secondary (12th) -->
+          <div class="timeline-entry">
+            <div class="timeline-marker">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="timeline-card">
+              <span class="timeline-period-badge">Completed 2022</span>
+              <h3 class="timeline-degree">Higher Secondary Education (12th Grade)</h3>
+              <div class="timeline-institution">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>GHSS Peringottukurissi, Kerala State Board</span>
+              </div>
+              <p class="timeline-desc">
+                Focused on physics, chemistry, and mathematics foundation necessary for applied engineering sciences.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Secondary School (10th) -->
+          <div class="timeline-entry">
+            <div class="timeline-marker">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="timeline-card">
+              <span class="timeline-period-badge">Completed 2020</span>
+              <h3 class="timeline-degree">Secondary School Leaving Certificate (10th Grade)</h3>
+              <div class="timeline-institution">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>HSS Kuthanur, Kerala State Board</span>
+              </div>
+              <p class="timeline-desc">
+                General secondary education with distinction in science and mathematics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. CONTACT SECTION
+         ========================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>Get In Touch</span>
+          </div>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-subtitle">
+            Interested in discussing embedded engineering roles, technical projects, or firmware design? Feel free to reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Channels -->
+          <div class="contact-info-col reveal-on-scroll">
+            <!-- Email -->
+            <div class="contact-channel-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Email Address</span>
+                <a href="mailto:sukrutha9656@gmail.com" class="channel-value">sukrutha9656@gmail.com</a>
+              </div>
+              <button class="btn-copy-chip" data-copy-text="sukrutha9656@gmail.com" title="Copy Email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-channel-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Direct Phone</span>
+                <a href="tel:+919633323493" class="channel-value">+91 9633323493</a>
+              </div>
+              <button class="btn-copy-chip" data-copy-text="+919633323493" title="Copy Phone Number">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-channel-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Geographic Location</span>
+                <span class="channel-value">Palakkad, Kerala, India</span>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-channel-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Professional Network</span>
+                <a href="https://linkedin.com/in/sukrutha426" target="_blank" rel="noopener noreferrer" class="channel-value">
+                  linkedin.com/in/sukrutha426 ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-card reveal-on-scroll">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message *</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Write your message or inquiry here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%;">
+                <span>Transmit Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       8. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        &copy; 2026 <strong>Sukrutha M</strong> | Embedded Systems Engineer
+      </div>
+
+      <div class="footer-links">
+        <a href="#about" class="footer-link">About</a>
+        <a href="#skills" class="footer-link">Skills</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#education" class="footer-link">Education</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+
+      <a href="#hero" class="btn-back-to-top" aria-label="Scroll back to top" title="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS FOR DETAILED PROJECT ARCHITECTURE
+       ========================================================================= -->
+  <!-- Modal 1: PID DC Motor Control -->
+  <div class="modal-container" id="modal-project-pid" role="dialog" aria-modal="true" aria-labelledby="modal-pid-title">
+    <div class="modal-backdrop" aria-hidden="true"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-pid-title">Realization of a PID Algorithm for DC Motor Speed Control</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-schematic-full">
+          <img src="assets/images/project-pid-placeholder.svg" alt="PID DC Motor Full Hardware Schematic Diagram">
+        </div>
+
+        <div>
+          <div class="modal-section-title">Hardware Architecture &amp; Interfaces</div>
+          <table class="tech-spec-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Role</th>
+                <th>Interface / Pinout</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Arduino Uno (ATmega328P)</td>
+                <td>Controller Core</td>
+                <td>16 MHz Clock, 10-bit Timer1 for PWM</td>
+              </tr>
+              <tr>
+                <td>L298N Dual H-Bridge</td>
+                <td>Motor Power Driver</td>
+                <td>Digital PWM Pin D9, IN1/IN2 Directional Logic</td>
+              </tr>
+              <tr>
+                <td>12V Brushed DC Motor</td>
+                <td>Actuator Plant</td>
+                <td>Rated 2500 Max RPM, L298N Out1 / Out2</td>
+              </tr>
+              <tr>
+                <td>Optical Rotary Encoder</td>
+                <td>Speed Feedback Sensor</td>
+                <td>Hardware Interrupt Pin D2 (INT0)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <div class="modal-section-title">PID Algorithm Implementation Highlights</div>
+          <ul class="project-features-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Discrete PID Equation:</strong> Computed control output using <code>u(t) = Kp*e(t) + Ki*∫e(t)dt + Kd*(de/dt)</code> computed over strict 10ms sampling periods.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Anti-Windup Protection:</strong> Clamped integral accumulator to prevent actuator saturation and excessive overshoot during step changes.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Tuning Methodology:</strong> Systematic manual tuning of Kp, Ki, and Kd parameters to achieve near-zero steady-state error and fast settling time under load disturbances.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Self-Balancing Boat Stabilization -->
+  <div class="modal-container" id="modal-project-boat" role="dialog" aria-modal="true" aria-labelledby="modal-boat-title">
+    <div class="modal-backdrop" aria-hidden="true"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-boat-title">Self-Balancing Boat Stabilization System</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-schematic-full">
+          <img src="assets/images/project-boat-placeholder.svg" alt="Self-Balancing Boat FreeRTOS Full Architecture Diagram">
+        </div>
+
+        <div>
+          <div class="modal-section-title">Hardware Architecture &amp; Interfaces</div>
+          <table class="tech-spec-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Role</th>
+                <th>Interface / Pinout</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ESP32 WROOM-32D</td>
+                <td>Core SoC &amp; RTOS Master</td>
+                <td>Dual Tensilica Xtensa LX6 240MHz</td>
+              </tr>
+              <tr>
+                <td>MPU6050 6-Axis IMU</td>
+                <td>Attitude Sensor (Gyro+Accel)</td>
+                <td>I2C Protocol (GPIO 21 SDA, GPIO 22 SCL @ 400kHz)</td>
+              </tr>
+              <tr>
+                <td>NEMA 17 Stepper Motor</td>
+                <td>Counter-Torque Actuator</td>
+                <td>A4988 Driver (STEP GPIO 18, DIR GPIO 19)</td>
+              </tr>
+              <tr>
+                <td>FreeRTOS Kernel</td>
+                <td>Real-time Preemption</td>
+                <td>Multitasking: Priority queues and semaphore synchronization</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <div class="modal-section-title">FreeRTOS Task Architecture</div>
+          <ul class="project-features-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Task 1 (IMU Sampling):</strong> Periodically reads raw accelerometer and gyroscope registers via I2C at 100Hz and transmits through FreeRTOS Queue.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Task 2 (Filter &amp; PID Computation):</strong> Fuses accelerometer angle and gyro integration to eliminate drift, computing desired corrective tilt angle.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Task 3 (Stepper Motor Actuation):</strong> Drives micro-stepping pulses to dynamically reposition the counterweight arm, stabilizing the hull against wave disturbances.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+    <div class="toast-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div id="toast-message">Transmission received successfully!</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/circuit-canvas.js"></script>
+  <script src="js/simulations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
